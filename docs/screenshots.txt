@@ -1,0 +1,20 @@
+SCREENSHOTS
+
+This file is a placeholder for terminal screenshots of the tool in action.
+
+Suggested captures for the portfolio / README:
+
+1. `oscp-notes init bluebox`
+   - Shows the workspace being created.
+
+2. `oscp-notes import-nmap bluebox scans/bluebox.xml`
+   - Shows the number of parsed services and the files written.
+
+3. The generated `notes/services.txt`
+   - Shows the per-service enumeration checklist.
+
+4. The generated `report.txt`
+   - Shows the clean plain-text report template with the parsed services section.
+
+Until images are added, see examples/sample-target/expected-output/ for the
+exact text output the commands produce against the bundled sample scan.

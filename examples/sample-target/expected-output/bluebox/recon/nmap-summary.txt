@@ -1,0 +1,10 @@
+NMAP SUMMARY
+============
+
+Hosts: 1
+Open services: 3
+
+HOST: 192.0.2.10
+  22/tcp     ssh              OpenSSH 8.2p1
+  80/tcp     http             Apache httpd 2.4.41
+  445/tcp    microsoft-ds     Samba smbd 4.11.6

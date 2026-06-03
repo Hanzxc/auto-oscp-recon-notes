@@ -1,0 +1,7 @@
+SSH CHECKLIST
+=============
+
+192.0.2.10 22/tcp
+[ ] Check banner
+[ ] Check supported auth methods
+[ ] Try valid credentials only if discovered through authorized lab workflow

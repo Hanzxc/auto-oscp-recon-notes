@@ -1,0 +1,42 @@
+LAB REPORT - bluebox
+====================
+
+TARGET SUMMARY
+--------------
+
+Target: bluebox
+Scope: Authorized lab target
+Date:
+
+SERVICES FOUND
+--------------
+
+Host        Port     Service       Product       Version
+----------  -------  ------------  ------------  -------
+192.0.2.10  22/tcp   ssh           OpenSSH       8.2p1
+192.0.2.10  80/tcp   http          Apache httpd  2.4.41
+192.0.2.10  445/tcp  microsoft-ds  Samba smbd    4.11.6
+
+INTERESTING FINDINGS
+--------------------
+
+Finding 1:
+Finding 2:
+
+METHODOLOGY NOTES
+-----------------
+
+What worked:
+What failed:
+What to check earlier next time:
+
+LESSONS LEARNED
+---------------
+
+Lesson 1:
+Lesson 2:
+
+APPENDIX: COMMANDS USED
+-----------------------
+
+nmap ... (recorded by the learner)

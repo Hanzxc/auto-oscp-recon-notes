@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -e ".[dev]"
+      - run: pytest -q
+      - run: ruff check .
+      - name: Smoke-test generated workspace
+        run: |
+          oscp-notes init /tmp/auto-oscp-smoke
+          oscp-notes import-nmap /tmp/auto-oscp-smoke examples/sample-target/scans/nmap-basic.xml
+          oscp-notes checklist /tmp/auto-oscp-smoke
+          oscp-notes report /tmp/auto-oscp-smoke
+          python tests/smoke_check.py /tmp/auto-oscp-smoke

@@ -1,0 +1,42 @@
+LAB REPORT - bluebox
+====================
+
+TARGET SUMMARY
+--------------
+
+Target: bluebox
+Scope: Authorized lab target
+Date: 2026-06-03
+
+SERVICES FOUND
+--------------
+
+Host        Port     Service       Product       Version
+----------  -------  ------------  ------------  -------
+192.0.2.10  22/tcp   ssh           OpenSSH       8.2p1
+192.0.2.10  80/tcp   http          Apache httpd  2.4.41
+192.0.2.10  445/tcp  microsoft-ds  Samba smbd    4.11.6
+
+INTERESTING FINDINGS
+--------------------
+
+Finding 1: Apache default page exposed on 80/tcp; directory discovery revealed /admin.
+Finding 2: SMB allowed anonymous share listing.
+
+METHODOLOGY NOTES
+-----------------
+
+What worked: enumerating SMB shares early surfaced a readable config file.
+What failed: spent too long on the SSH banner before checking the web app.
+What to check earlier next time: always run directory discovery on every HTTP port first.
+
+LESSONS LEARNED
+---------------
+
+Lesson 1: import scans into a clean workspace before touching the target manually.
+Lesson 2: keep a per-service checklist so nothing obvious gets skipped.
+
+APPENDIX: COMMANDS USED
+-----------------------
+
+nmap -sV -oX scans/bluebox.xml 192.0.2.10

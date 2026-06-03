@@ -1,0 +1,36 @@
+SERVICES
+========
+
+HOST: 192.0.2.10
+
+SERVICE: 22/tcp - ssh
+State: open
+Product: OpenSSH
+Version: 8.2p1
+Extra info: Ubuntu Linux; protocol 2.0
+Notes:
+  [ ] Check banner
+  [ ] Check supported auth methods
+  [ ] Try valid credentials only if discovered through authorized lab workflow
+
+SERVICE: 80/tcp - http
+State: open
+Product: Apache httpd
+Version: 2.4.41
+Extra info: (Ubuntu)
+Notes:
+  [ ] Check page title
+  [ ] Identify technologies
+  [ ] Run directory discovery manually
+  [ ] Check forms and parameters
+  [ ] Take a screenshot
+
+SERVICE: 445/tcp - microsoft-ds
+State: open
+Product: Samba smbd
+Version: 4.11.6
+Notes:
+  [ ] List shares
+  [ ] Check anonymous / guest access
+  [ ] Enumerate users and host info
+  [ ] Note SMB signing status

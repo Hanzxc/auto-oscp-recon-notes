@@ -1,0 +1,39 @@
+[
+  {
+    "host": "192.0.2.10",
+    "port": 22,
+    "protocol": "tcp",
+    "name": "ssh",
+    "state": "open",
+    "product": "OpenSSH",
+    "version": "8.2p1",
+    "extra_info": "Ubuntu Linux; protocol 2.0",
+    "scripts": {
+      "ssh-hostkey": "2048 SHA256:abcdef (RSA)"
+    }
+  },
+  {
+    "host": "192.0.2.10",
+    "port": 80,
+    "protocol": "tcp",
+    "name": "http",
+    "state": "open",
+    "product": "Apache httpd",
+    "version": "2.4.41",
+    "extra_info": "(Ubuntu)",
+    "scripts": {
+      "http-title": "Welcome to the Lab"
+    }
+  },
+  {
+    "host": "192.0.2.10",
+    "port": 445,
+    "protocol": "tcp",
+    "name": "microsoft-ds",
+    "state": "open",
+    "product": "Samba smbd",
+    "version": "4.11.6",
+    "extra_info": "",
+    "scripts": {}
+  }
+]

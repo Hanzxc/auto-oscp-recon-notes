@@ -1,0 +1,8 @@
+SMB CHECKLIST
+=============
+
+192.0.2.10 445/tcp
+[ ] List shares
+[ ] Check anonymous / guest access
+[ ] Enumerate users and host info
+[ ] Note SMB signing status

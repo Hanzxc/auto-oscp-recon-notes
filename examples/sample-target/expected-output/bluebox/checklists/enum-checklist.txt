@@ -1,0 +1,29 @@
+ENUMERATION CHECKLIST
+=====================
+
+GENERAL
+-------
+
+[ ] Record the target scope and authorization note
+[ ] Save raw Nmap output under recon/
+[ ] Re-run a full TCP port scan to confirm nothing was missed
+
+HOST: 192.0.2.10
+
+SERVICE: 22/tcp - ssh
+[ ] Check banner
+[ ] Check supported auth methods
+[ ] Try valid credentials only if discovered through authorized lab workflow
+
+SERVICE: 80/tcp - http
+[ ] Check page title
+[ ] Identify technologies
+[ ] Run directory discovery manually
+[ ] Check forms and parameters
+[ ] Take a screenshot
+
+SERVICE: 445/tcp - microsoft-ds
+[ ] List shares
+[ ] Check anonymous / guest access
+[ ] Enumerate users and host info
+[ ] Note SMB signing status

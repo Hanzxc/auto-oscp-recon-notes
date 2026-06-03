@@ -1,0 +1,9 @@
+HTTP / HTTPS CHECKLIST
+======================
+
+192.0.2.10 80/tcp
+[ ] Check page title
+[ ] Identify technologies
+[ ] Run directory discovery manually
+[ ] Check forms and parameters
+[ ] Take a screenshot

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic sample using RFC 5737 documentation address 192.0.2.10. Not a real target. -->
+<nmaprun scanner="nmap" args="nmap -sV -oX nmap-basic.xml 192.0.2.10" version="7.94">
+  <host>
+    <status state="up" reason="echo-reply"/>
+    <address addr="192.0.2.10" addrtype="ipv4"/>
+    <hostnames>
+      <hostname name="bluebox.example" type="user"/>
+    </hostnames>
+    <ports>
+      <port protocol="tcp" portid="22">
+        <state state="open" reason="syn-ack"/>
+        <service name="ssh" product="OpenSSH" version="8.2p1" extrainfo="Ubuntu Linux; protocol 2.0" method="probed" conf="10"/>
+        <script id="ssh-hostkey" output="2048 SHA256:abcdef (RSA)"/>
+      </port>
+      <port protocol="tcp" portid="80">
+        <state state="open" reason="syn-ack"/>
+        <service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"/>
+        <script id="http-title" output="Welcome to the Lab"/>
+      </port>
+      <port protocol="tcp" portid="139">
+        <state state="closed" reason="reset"/>
+        <service name="netbios-ssn"/>
+      </port>
+      <port protocol="tcp" portid="445">
+        <state state="open" reason="syn-ack"/>
+        <service name="microsoft-ds" product="Samba smbd" version="4.11.6" method="probed" conf="10"/>
+      </port>
+    </ports>
+  </host>
+</nmaprun>
