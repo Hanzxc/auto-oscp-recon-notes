@@ -38,14 +38,25 @@ hands-on data center operations.
 
 ## Install
 
+For normal use from this repository:
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
+python -m pip install -e .
+```
+
+Requires Python 3.11+. The tool has no third-party runtime dependencies.
+
+For development, install the optional `dev` extra:
+
+```bash
 python -m pip install -e ".[dev]"
 ```
 
-Requires Python 3.11+. No third-party runtime dependencies. The dev extra only
-installs `pytest` and `ruff`.
+`-e .` installs this local project in editable mode. `.[dev]` means "install
+this local project, plus the `dev` tools listed in `pyproject.toml`". The `dev`
+extra only installs `pytest` and `ruff` for tests and linting.
 
 ## Quick start
 
